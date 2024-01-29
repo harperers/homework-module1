@@ -6,19 +6,19 @@ header{
 }
 #home header {
     background: no-repeat lightgrey url(images/cliff_ocean.jpg);
-    background-size: 1500px;
+    background-size: 2000px;
 }
 #activities header {
     background: no-repeat lightgrey url(images/runfly.jpg);
-    background-size: 1500px;
+    background-size: 2000px;
 }
 #contact header {
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
-    background-size: 1500px;
+    background-size: 2000px;
 }
 #cliffs header {
     background: no-repeat lightgrey url(images/forest_cliff.jpg);
-    background-size: 1500px;
+    background-size: 2000px;
 }
 .main-header {
     background-color:rgb(255, 255, 255, 0.8);
@@ -67,6 +67,8 @@ header{
 /* Main */
 main {
     font-family: Arial, Helvetica, sans-serif;
+    margin-top:100px;
+    margin-bottom:100px;
 }
 main h1 {
     color:#9ed034;
@@ -234,5 +236,19 @@ figcaption {
     bottom:430px;
     font-size: large;
     color:#fff;
-    font-weight:bold
+    font-weight:bold;
+}
+#timeofday {
+    background-image:linear-gradient(0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    color:#3a3a3a;
+    height:3em;
+    text-align:center;
+}
+span {
+    position:relative;
+    top:10px;
+}
+span:last-child {
+    color:#125688;
 }
