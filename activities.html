@@ -18,7 +18,7 @@
         <nav class="main-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="cliffs.html">Cliffs</a><</li>
+                <li><a href="cliffs.html">Cliffs</a></li>
                 <li class="active"><a href="activities.html">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -82,12 +82,12 @@
 
 <section>
     <ul id="partners">
-        <li class="partner"><img src="images/partners/partner-bustour.png" alt="Partner Bus Tours"></li>
+        <!-- <li class="partner"><img src="images/partners/partner-bustour.png" alt="Partner Bus Tours"></li>
         <li class="partner"><img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental"></li>
         <li class="partner"><img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure"></li>
         <li class="partner"><img src="images/partners/partner-collegetours.png" alt="Partner College Tours"></li>
         <li class="partner"><img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals"></li>
-        <li class="partner"><img src="images/partners/partner-tourgroup.png" alt="Partner Tour Groups"></li>
+        <li class="partner"><img src="images/partners/partner-tourgroup.png" alt="Partner Tour Groups"></li> -->
     </ul>
 </section>
 
@@ -97,9 +97,9 @@
             &copy;Copyright 2020 :: GreatCliffs.com
         </div>
         <div class="social">
-            <h3>Facebook Image</h3>
-            <h3>Instagram Image</h3>
-            <h3>Twitter Image</h3>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
         </div>
 
     </div>
@@ -109,3 +109,21 @@
 </footer>
 
 </html>
+
+<script>
+    var photos = []; //Declar an empty array to store image element
+    var fileNames = ["bustour", "cabinrental", "campingadv", "collegetours", "rentalbike", "tourgroup"];
+    var imageList = []; //Declare an empty array to store html list that contain an image
+    var image; //Declare an empty variable to store the assembles image list codes
+    var openList = "<li class='partner'>"; //Declare a variable to contain open list tag
+    var closeList = "</li>"; //Declare a variable to contain close list tag
+
+    //Crate a loop to create 6 images starting with index of 0
+    for (var i=0; i<6; i++) {
+        photos.push("<img src ='images/partners/partner-" +fileNames[i]+".png'>"); //Assemble file name into image element and store in an array
+        image = openList + photos[i] + closeList; //Assxemble image element from array with list elements and store in a variable
+        imageList.push(image); //Store(push) the assembled list code into an array
+    }
+    //Display all six image codes stored in the array
+    document.getElementById("partners").innerHTML = imageList.join(" ");
+</script>
