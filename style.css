@@ -16,6 +16,10 @@ header{
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
     background-size: 1500px;
 }
+#cliffs header {
+    background: no-repeat lightgrey url(images/forest_cliff.jpg);
+    background-size: 1500px;
+}
 .main-header {
     background-color:rgb(255, 255, 255, 0.8);
     width: 700px;
@@ -212,4 +216,23 @@ span:first-child {
 }
 fieldset {
     border: 2px solid #9ed034;
+}
+li {
+    display:inline-block;
+}
+main #album #photo img {
+    width: 600px;
+    height: 400px;
+    border-top: #852b1b solid 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:inline;
+}
+figcaption {
+    position:relative;
+    left:350px;
+    bottom:430px;
+    font-size: large;
+    color:#fff;
+    font-weight:bold
 }
