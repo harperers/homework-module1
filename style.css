@@ -198,13 +198,13 @@ input[type="radio"] {
 textarea {
     width: 300px;
 }
-input[type="submit"] {
+form .button input {
     display: block;
     margin: 20px 0 10px 200px;
     width: 100px;
     height: 30px;
     color:#fff;
-    background-color: #4977D1;
+    /* background-color: #4977D1; */
 }
 span:first-child { 
     font-weight: bold;
@@ -251,4 +251,22 @@ span {
 }
 span:last-child {
     color:#125688;
+}
+.randomcode {
+    margin:20px;
+    width:100px;
+    height:40px;
+    display:flex;
+}
+.randomcode p{
+    background-color: #3a3a3a50;
+    height:40px;
+    width:100px;
+    margin-left:10px;
+    position:relative;
+    bottom:28px;
+    padding-top:20px;
+    padding-right:20px;
+    padding-left: 20px;;
+    text-align:center;
 }
