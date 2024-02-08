@@ -7,6 +7,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <html id="cliffs">
@@ -33,15 +34,21 @@
     <p>No matter which direction you head from Irvine, California, the sites are easily reached within a 100 mile radius. West Cliff is the most popular among Westcliff University campus students because of its close proximity.</p>
     <ul id="album">
         <li id="caption"><figcaption>East Cliff</figcaption></li>
-        <li id="photo"><img src="images/cliff-east-river.jpg"></li>
+        <li id="photo"><a href="#/" value="East Cliff" class="lightbox-toggle"><img src="images/cliff-east-river.jpg"></a></li>
         <li id="caption"><figcaption>North Cliff</figcaption></li>
-        <li id="photo"><img src="images/cliff-north-mountain.jpg"></li>
+        <li id="photo"><a href="#/" value="North Cliff" class="lightbox-toggle"><img src="images/cliff-north-mountain.jpg"></a></li>
         <br>
         <li id="caption"><figcaption>South Cliff</figcaption></li>
-        <li id="photo"><img src="images/cliff-south-canyon.jpg"></li>
+        <li id="photo"><a href="#/" value="South Cliff" class="lightbox-toggle"><img src="images/cliff-south-canyon.jpg"></a></li>
         <li id="caption"><figcaption>West Cliff</figcaption></li>
-        <li id="photo"><img src="images/cliff-west-sea.jpg"></li>
+        <li id="photo"><a href="#/" value="West Cliff" class="lightbox-toggle"><img src="images/cliff-west-sea.jpg"></a></li>
     </ul>
+
+    <div class="backdrop"></div>
+
+    <div class="box">
+        <div class="close">x</div>
+    </div>
 </main>
 
 <section>
@@ -72,5 +79,6 @@
     </div>
 </footer>
 <script src="site_scripts.js"></script>
+<script src="cliffs.js"></script>
 </html>
 
