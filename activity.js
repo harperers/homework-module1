@@ -5,12 +5,28 @@ $(document).ready(function () {
         }
     },
         function () {
-            this.css("cursor", "default");
+            $(this).css("cursor", "default");
         });
-    $(document).click(function (e) {
-        var target = $(e.target).closest("td");
-        if (target.html() != "Not Available" && target.html() != "Hiking" && target.html() != "Kayak" && target.html() != "Skydiving" && target.html() != "Biking" && target.html() != "Camping") {
-            target.toggleClass("highlight");
+    $("td").click(function (e) {
+        var content = $(this).text();
+        if (content != "Not Available" && content != "Hiking" && content != "Kayak" && content != "Skydiving" && content != "Biking" && content != "Camping") {
+            var cliffNum = $(this).index();
+            var cliffs = ["West Cliff", "North Cliff", "East Cliff", "South Cliff"];
+            
+            $(this).toggleClass("highlight");
+
+            if ($(this).hasClass("highlight")) {
+                $('#displaySelected').css("visibility", "visible");
+                $('#displaySelected').css("margin-top", "2em");
+                $('#result').append("<p>"+content+ ' at ' +cliffs[cliffNum-1]+"</p>");
+            } else {
+                $('#result p:contains('+content+')').remove();
+
+                if($('#result').has('p').length == false) {
+                    $('#displaySelected').css("visibility", "hidden");
+                    $('#displaySelected').css("margin-top", "0");
+                }
+            }
         }
     });
 });
